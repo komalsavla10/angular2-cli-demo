@@ -2,5 +2,14 @@
   {{title}}
 </h1>
 
-<a [routerLink]="['Tickets']">Heroes</a>
-<router-outlet></router-outlet>
+<div *ngIf="!loggedIn">
+<a [routerLink]="['Login']">Login</a>
+</div>
+
+<div *ngIf="loggedIn">
+<a [routerLink]="['Hero']">Heroes</a>
+<a [routerLink]="['Dashboard']">Dashboard</a>
+<a (click)="Logout()">Logout</a>
+</div>
+<router-outlet-new></router-outlet-new>
+

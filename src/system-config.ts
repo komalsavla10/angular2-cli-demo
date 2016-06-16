@@ -26,11 +26,14 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'angular2-cookie',
 
   // App specific barrels.
   'app',
   'app/shared',
   'app/+tickets',
+  'app/+hero',
+  'app/+dashboard',
   /** @cli-barrel */
 ];
 
@@ -47,6 +50,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
+    'angular2-cookie':'vendor/angular2-cookie',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages
